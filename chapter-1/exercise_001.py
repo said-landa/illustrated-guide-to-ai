@@ -12,6 +12,10 @@ weights = [
     [0, 0, 0, 0]
 ]
 
+output = 0
+
 for row in range(0, len(inputs)):
     for column in range(0, len(inputs[row])):
-        print(inputs[row][column] * weights[row][column]) 
+        output += inputs[row][column] * weights[row][column]
+
+print(output)
