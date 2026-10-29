@@ -1,8 +1,10 @@
+#make a perceptron!
+
 inputs = [
-    [1, 1, 1, -1],
-    [-1, 1, -1, -1],
-    [-1, 1, -1, -1],
-    [-1, 1, -1, -1]
+    [-1, -1,  1, -1 ],
+    [-1, -1,  1, -1 ],
+    [ 1, -1,  1, -1 ],
+    [ 1,  1,  1, -1 ]
 ]
 
 weights = [
@@ -18,8 +20,6 @@ for row in range(0, len(inputs)):
     for column in range(0, len(inputs[row])):
         output += inputs[row][column] * weights[row][column]
 
-if output > 0: print('T')
+if output > 0: print(f'{output} T')
 if output < 0: print('J')
 if output == 0: print(0)
-
-print(output)
