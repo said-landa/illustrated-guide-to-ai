@@ -9,6 +9,15 @@ inputs = [
 
 target = 1
 
+t_right = [
+    [-1, 1, 1, 1],
+    [-1, -1, 1, -1],
+    [-1, -1, 1, -1],
+    [-1, -1, 1, -1]
+]
+
+examples = [(inputs, target), (t_right, 1)]
+
 weights = [
     [0, 0, 0, 0],
     [0, 0, 0, 0],
