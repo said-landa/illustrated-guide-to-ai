@@ -38,6 +38,7 @@ weights = [
     [0, 0, 0, 0]
 ]
 
+#training
 for inputs, target in examples:
     output = 0
     for row in range(0, len(inputs)):
@@ -52,6 +53,13 @@ for inputs, target in examples:
     for row in range(len(inputs)):
         for column in range(len(inputs[row])):
             weights[row][column] += step * inputs[row][column]
+
+#testing
+inputs = t_left
+output = 0
+for row in range(len(inputs)):
+    for column in range(len(inputs[row])):
+        output += inputs[row][column] * weights[row][column]
 
 if output > 0: print('Positive')
 if output < 0: print('Negative')
